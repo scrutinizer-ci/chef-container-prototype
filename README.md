@@ -1,11 +1,10 @@
-Chef Container Prototype
-========================
+# Chef Container Prototype
 
 This repository contains a prototype for building a custom image using Chef recipes.
 
 
-Installation
-============
+## Installation
+
 Make sure that you have ``chef`` and ``vagrant`` installed locally:
 
 - [Installing chef](http://www.getchef.com/chef/install/)
@@ -30,8 +29,8 @@ git push -u origin master
 You should now see a first build of your container being triggered on Scrutinizer.
 
 
-Building Box Locally
-====================
+## Building Box Locally
+
 During development, you typically iterate on your box locally before committing your changes and triggering a build on
 Scrutinizer. If you installed vagrant, just run
 
@@ -45,7 +44,7 @@ This will fetch the base box and run your chef recipes. If your box is already r
 vagrant provision
 ```
 
-Further Resources
-=================
+
+## Further Resources
 
 - [Chef Documentation](http://docs.opscode.com/)

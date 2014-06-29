@@ -29,16 +29,16 @@ git push -u origin master
 You should now see a first build of your container being triggered on Scrutinizer.
 
 
-## Building Box Locally
+## Building Container Locally
 
-During development, you typically iterate on your box locally before committing your changes and triggering a build on
-Scrutinizer. If you installed vagrant, just run
+During development, you typically iterate on your recipes locally before committing your changes and triggering a build on
+Scrutinizer. If you installed vagrant, you can just run
 
 ```
 vagrant up
 ```
 
-This will fetch the base box and run your chef recipes. If your box is already running, you can instead run
+This will fetch the base image and run your chef recipes. If your box is already running, you can instead run
 
 ```
 vagrant provision

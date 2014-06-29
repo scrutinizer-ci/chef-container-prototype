@@ -1,0 +1,20 @@
+build:
+  container: 'base/ubuntu/trusty/amd64'
+  dependencies:
+    before:
+      - apt-get update
+      - echo 'y' | apt-get upgrade
+      - echo 'y' | apt-get install ruby ruby-dev make gcc
+      - gem install chef
+
+  project_setup:
+    before:
+      - chef-solo -c solo.rb -j attributes.json
+
+  deployment:
+    -
+      container:
+        user: scrutinizer
+        # Uncomment if you would like to restrict access to this container.
+#        access:
+#          - 'g/login/*'
